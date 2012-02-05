@@ -1,0 +1,20 @@
+<%= render 'layouts/scroll' %>
+<article id="secondary-feed">
+	<% @secondary_feed.each do |post| %>
+		<a href="<%= post_path({ :id => post.Id }) %>">
+			<div>
+				<figure>
+					<%= image_tag(post.Image__c, :alt => post.Name, :class => "feed-img") %>
+				</figure>
+				<div class="summary">
+					<h5><%= post.Name %></h5>
+					<span>
+						<%= post.Created_Date__c %>,
+						<%= "Autor" %>
+					</span>
+					<p><%= "#{post.Content__c[0..300]}..." %></p>
+				</div>
+			</div>
+		</a>
+	<% end %>
+</article>

@@ -1,0 +1,35 @@
+<div id="scroll-container">
+	<ul id="scroll-inner">
+		<% @main_feed.each do |post| %>
+			<li>
+				<%= link_to image_tag(post.Image__c, :alt => post.Name, :width => "300", :height => "220"), post_path({ :id => post.Id }) %>
+				<h3><%= link_to post.Name, post_path({ :id => post.Id }) %></h3>
+				<span>
+					<%= post.Created_Date__c %>,
+					<%= "Autor" %>
+				</span>
+				<p><%= "#{post.Content__c[0..300]}..." %></p>
+			</li>
+		<% end %>
+	</ul>
+</div>
+<div id="scroll-selector">
+	<ul id="ft_tabs">
+		<% @main_feed.each do |post| %>
+			<li><a href="javascript:;" style="background: url(<%= post.Image__c %>);"><div class="border"></div></a></li>
+		<% end %>
+	</ul>
+</div>
+<script>
+	var j$ = jQuery.noConflict();
+	
+	j$(document).ready(function(){
+		j$.featureList(
+			j$("#ft_tabs li a"),
+			j$("#scroll-inner li"), {
+				start_item: 0,
+				pause_on_hover: true,
+				transition_interval: 8000
+			});
+	});
+</script>

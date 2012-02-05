@@ -1,0 +1,22 @@
+<%= form_for(@comment, :html => { :class => 'commentForm' }) do |f| %>
+	<% Comment__c.attributes.select {|a| Comment__c.updateable?(a)}.each do |attr| %>
+		<field>
+			<%= f.label attr, Comment__c.label_for(attr) %>
+			<% case Comment__c.field_type(attr) %>
+				<% when "textarea" %>
+					<%= f.text_area attr %>
+				<% else %>
+					<%= f.text_field attr %>
+			<% end %>
+		</field>
+	<% end %>
+	<div class="actions">
+		<%= f.submit "Enviar" %>
+	</div>
+	<% @comments.each do |c| %>
+		<div class="comment">
+			<span><%= c.Author__c %> - <%= c.Created_Date__c %></span>
+			<p><%= c.Comment__c %></p>
+		</div>
+	<% end %>
+<% end %>

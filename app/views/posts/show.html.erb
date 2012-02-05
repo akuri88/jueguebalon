@@ -1,0 +1,45 @@
+<% @post.each do |post| %>
+	<article id="post">
+		<h1><%= post.Name %></h1>
+		<%= image_tag(post.Image__c, :alt => post.Name, :class => "post_img") %>
+		<div class="post-info">
+			<span><%= "Autor" %><span>
+			<br />
+			<span><%= post.Created_Date__c %></span>
+			<br />
+			<br />
+			<span>Compartir</span>
+			<div id="share">
+				<%= link_to facebook, '#' %>
+				<%= link_to twitter, '#' %>
+				<%= link_to google, '#' %>
+			</div>
+			<br />
+			<span>Etiquetas</span>
+			<br/>
+			<a href="#">Futbol</a>,
+			<a href="#">Champions</a>,
+			<a href="#">Messi</a>
+		</div>
+		<p><%= post.Content__c %></p>
+	</article>
+	<table class="links"><tr>
+		<td>
+			<h4>Recientes</h4>
+			<ul>
+			<% @recent.each do |recent| %>
+				<li><%= link_to recent.Name, root_path({ :id => recent.Id, :retUrl => request.url }) %></li>
+			<% end %>
+			</ul>
+		</td>
+		<td>
+			<h4>Relacionados</h4>
+			<ul>
+			<% @related.each do |related| %>
+				<li><%= link_to related.Name, root_path({ :id => related.Id, :retUrl => request.url }) %></li>
+			<% end %>
+			</ul>
+		</td>
+	</tr></table>
+	<%= render 'shared/comment_form' %>
+<% end %>
