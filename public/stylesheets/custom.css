@@ -1,0 +1,312 @@
+body {
+	background: url("../images/footer.gif") repeat-x 0 bottom #F0F0F0;
+	color: #666666;
+}
+
+header {
+	background: url("../images/background.png") repeat-x #44AA55;
+	height: 180px;
+}
+
+.main {
+	margin: 0 auto;
+	width: 950px;
+	line-height: 1.3333em;
+}
+
+.header-row {
+	height: 130px;
+}
+
+header img {
+	height: 130px;
+}
+
+#main {
+	width: 100%;
+	display: table;
+	margin-top: 20px;
+	font-size: 120%;
+}
+
+section {
+	display: table-cell;
+	padding: 10px;
+	vertical-align: top;
+}
+
+section h1 {
+	font-size: 200%;
+}
+
+aside {
+	display: table-cell;
+	width: 250px;
+	padding: 10px;
+}
+
+footer {
+	padding-left: 20px;
+	color: #333333;
+}
+
+/* Links */
+a, a:visited {
+	color: #133EB1;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #6E8BD8;
+}
+
+/* Navigation */
+header nav ul {
+	height: 50px;
+	padding: 0;
+	list-style-type: none;
+}
+
+header nav ul li {
+	background: url("../images/menu_item.png") repeat-x scroll left top transparent;
+	display: inline-block;
+	float: left;
+	margin-right: 1px;
+	width: 185px;
+	height: 50px;
+	text-align: left;
+}
+
+header nav ul li:hover {
+	background-position: left bottom;
+}
+
+header nav a, header nav a:visited {
+	text-decoration: none;
+	display: block;
+	color: #FFFFFF;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1.4em;
+	padding: 15px 0 14px 19px;
+	text-transform: uppercase;
+}
+
+header nav a:hover {
+	color: #000000;
+}
+
+/* Feeds */
+#main-feed li {
+	list-style-type: none;
+	margin: 10px 0;
+	font-size: 80%;
+}
+
+#main-feed .feed-img {
+	width: 200px;
+}
+
+#main-feed .feed-title, #secondary-feed .feed-title {
+	font-size: 130%;
+	font-weight: bold;
+}
+
+#main-feed li {
+	border-bottom: 1px solid #9E9E9E;
+}
+
+#main-feed li aside {
+	width: 500px;
+	vertical-align: top;
+}
+
+#secondary-feed {
+	background: #FFFFFF;
+	padding-left: 0;
+	width: 620px;
+	margin: 20px auto;
+	padding: 15px;
+}
+
+#secondary-feed a {
+	display: block;
+	border: 1px solid #9E9E9E;
+	border-bottom: none;
+	color: #333333;
+}
+
+#secondary-feed a:last-child {
+	border: 1px solid #9E9E9E;
+}
+
+#secondary-feed a:hover {
+	background: #2E2E2E;
+	color: #DDDDDD;
+}
+
+#secondary-feed a div figure {
+	width: 100px;
+	height: 75px;
+	float: left;
+	margin: 15px 10px;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+#secondary-feed .feed-img {
+	width: 120px;
+	position: relative !important;
+	right: 10px !important;
+}
+
+#secondary-feed .summary {
+	font-size: 75%;
+	margin-left: 120px;
+	padding: 10px 10px 5px 0;
+	width: 488px;
+	height: 90px;
+	overflow: hidden;
+}
+
+#secondary-feed .summary h5 {
+	color: #486FD8;
+	margin-bottom: 2px;
+}
+
+/* Posts */
+#post {
+	background: #FFFFFF;
+	padding: 15px;
+	color: #333333;
+}
+
+#post h1 {
+	color: #133EB1;
+}
+
+#post .post_img {
+	width: 350px;
+}
+
+#post table .links {
+	width: 100%;
+}
+
+#post table .links td {
+	width: 50%;
+}
+
+#post p {
+	font-size: 95%;
+}
+
+#post .post-info {
+	float: right;
+	width: 250px;
+	height: 247px;
+	padding: 5px 0 5px 15px;
+	border-left: 1px solid #9E9E9E;
+	color: #F0F0F0;
+	background: #2E2E2E;
+}
+
+#post .post-info a {
+	color: #6E8BD8;
+}
+
+#post .post-info a:hover {
+	color: #C6F76F;
+}
+
+#share {
+	margin: 3px 15px 3px 0;
+	padding: 5px 0 2px 8px;
+	border-top: solid 1px #F0F0F0;
+	border-bottom: solid 1px #F0F0F0;
+}
+
+#share a {
+	margin: 0 10px;
+}
+
+#share a img {
+	width: 50px;
+}
+
+table.links {
+	background: #FFFFFF;
+	margin: 15px auto;
+	font-size: 90%;
+}
+
+table.links td {
+	padding: 15px;
+}
+
+table.links h4 {
+	margin-bottom: 4px;
+}
+
+table.links ul {
+	width: 90%;
+	background: #F0F0F0;
+	list-style-type: circle;
+	margin: 0 auto;
+	padding: 10px;
+	padding-left: 1.5em;
+	border: solid 1px #999999;
+}
+
+table.links li {
+	margin-bottom: 2px;
+}
+
+/* Comment form */
+.commentForm {
+	background: #FFFFFF;
+	padding: 15px;
+}
+
+.commentForm field {
+	display: block;
+}
+
+.commentForm field label {
+	vertical-align: top;
+	display: inline-block;
+	width: 125px;
+	text-align: right;
+	margin: 7px 20px 0 0;
+}
+
+.commentForm field input {
+	width: 400px;
+}
+
+.commentForm field textarea {
+	height: 100px;
+}
+
+.commentForm .actions {
+	padding-left: 150px;
+	margin-bottom: 15px;
+}
+
+.commentForm div.comment {
+	background: #ACBDEC;
+	color: #222222;
+	margin: 10px auto;
+	padding: 10px;
+	border: 1px solid #24408C;
+}
+
+.commentForm div.comment span {
+	font-size: 85%;
+	font-weight: bold;
+}
+
+.commentForm div.comment p {
+	margin-bottom: 3px;
+	font-size: 80%;
+}

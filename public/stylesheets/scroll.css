@@ -1,0 +1,96 @@
+body {
+	font-family: Arial;
+}
+
+#scroll-container {
+	background: #FFFFFF;
+	height: 230px;
+	overflow: hidden;
+	position: relative;
+	width: 650px;
+	margin: auto;
+}
+
+#scroll-container ul {
+	left: 0;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 2400px;
+}
+
+#scroll-container li {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+#scroll-container img {
+	float: left;
+}
+
+#scroll-container h3 {
+	margin: 5px 0 0 310px;
+	color: #0022AA;
+	width: 320px;
+	font-weight: bold;
+}
+
+#scroll-container span {
+	margin-left: 10px;
+	color: #555555;
+	font-size: 75%;
+}
+
+#scroll-container p {
+	width: 315px;
+	margin-left: 310px;
+	font-size: 85%;
+}
+
+#scroll-inner li {
+	background: #F0F0F0;
+}
+
+#scroll-selector {
+	background: url("../images/bg_scroll.png") repeat scroll 0 0 transparent;
+	width: 650px;
+	height: 120px;
+	margin: auto;
+}
+
+#scroll-selector ul {
+	list-style-type: none;
+	width: 100%;
+	float: left;
+	margin: 0 0 0 5px;
+	padding: 0;
+}
+
+#scroll-selector li {
+	display: inline-block;
+	margin: 5px;
+	float: left;
+}
+
+#scroll-selector a {
+	background-position: left 4px;
+	margin-top: 4px;
+	display: block;
+	width: 150px;
+	height: 102px;
+	overflow: hidden;
+}
+
+#scroll-selector a .border {
+	width: 126px;
+	height: 82px;
+	border: solid 10px #FFFFFF;
+	opacity: 0;
+}
+
+#scroll-selector a .border:hover, #scroll-selector a.current .border {
+	opacity: 1;
+}
